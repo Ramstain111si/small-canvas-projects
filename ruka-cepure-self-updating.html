@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+    <meta http-equiv="refresh" content="5" >
+<body>
+
+<canvas id="myCanvas" width="300" height="300" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.fillStyle = "#ffff66";
+ctx.fillRect(0, 0, 300, 300);
+
+
+//1 
+let x1 = 100;
+let y1 = 100;
+//2
+let x2 = 200;
+let y2 = 100;
+//3
+let x3 = 200;
+let y3 = 200;
+//4
+let x4 = 100;
+let y4 = 200;
+
+let xr = Math.random() * 300;
+let yr = Math.random() * 300;
+
+
+ctx.beginPath();
+ctx.arc(xr, yr, 25, 0, 2 * Math.PI);
+ctx.stroke();
+
+ctx.moveTo(x1,y1);
+ctx.lineTo(x2,y2);
+ctx.stroke();
+ctx.lineTo(x3,y3);
+ctx.stroke();
+ctx.lineTo(x4,y4);
+ctx.stroke();
+ctx.lineTo(x1,y1);
+ctx.stroke();
+
+ctx.moveTo(x1,y1);
+ctx.lineTo(xr,yr);
+ctx.stroke();
+
+ctx.moveTo(x2,y2);
+ctx.lineTo(xr,yr);
+ctx.stroke();
+
+ctx.moveTo(x3,y3);
+ctx.lineTo(xr,yr);
+ctx.stroke();
+
+ctx.moveTo(x4,y4);
+ctx.lineTo(xr,yr);
+ctx.stroke();
+</script>
+
+
+
+</body>
+</html>

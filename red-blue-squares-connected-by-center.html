@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Zupiņa</title>
+
+
+        <style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+#canvas {
+    border: 2px solid black;
+   
+}
+
+        </style>
+</head>
+<body>
+    <canvas id="kanvasins"></canvas>
+    <script>
+
+const zupina = document.querySelector("#kanvasins");
+    const zup = zupina.getContext("2d");
+
+//resizing
+zupina.width = window.innerHeight;
+zupina.height = window.innerWidth;
+
+//window.addEventListener('resize',function(){
+    //zupina.width = window.innerHeight;
+    //zupina.height = window.innerWidth;
+    
+    //pildits cetrsturis
+//zup.
+//zup.fillRect(10,10,100,200);
+//zup.strokeStyle = "red";
+//zup.strokeRect(100, 100, 200, 200);
+ 
+//});
+
+   //pildits cetrsturis
+
+//zup.fillRect(10,10,150,250);
+
+   //liniju cetrsturis
+
+//koordinatdes zilajam
+let zilaisPlatums = 100;
+let zilaisX = 300;
+let zilaisY = 100;
+
+//koordinates sarkanajam
+
+let sarkPlatums = 50; 
+let sarkanaisX = zilaisX + zilaisPlatums / 2 - sarkPlatums / 2;
+let sarkanaisY = zilaisY + zilaisPlatums / 2 - sarkPlatums / 2;
+
+zup.strokeStyle = "blue";
+zup.lineWidth = 5;
+zup.strokeRect(zilaisX, zilaisY, zilaisPlatums, zilaisPlatums);
+
+zup.strokeStyle = "red";
+zup.strokeRect(sarkanaisX, sarkanaisY, sarkPlatums, sarkPlatums);
+
+    </script>
+</body>
+</html>
