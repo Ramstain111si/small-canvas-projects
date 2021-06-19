@@ -15,8 +15,8 @@ var ctx = canvas.getContext("2d");
 
 
 
-//zimesim baltu medicinas krustu uz sarkana fona
-//1 sarkans fons, sarkans kvadrats, divi balti taisnsturi, kuri perpendikulari krustojas
+//this will draw white medicine symbol, white cross on red background
+//1 red bacground, a square, two white rectangles, crossing each other
 
 // sarkana kvadrata, parametri
 
@@ -25,12 +25,12 @@ var yVert = 0; 		//UzLeju
 
 
 
-var lielums = 100;	//kvadratamalas garums
-var xZimet = lielums; 	//HorizontaliPaLabi
-var yZimet = lielums; 	//UzLeju
+var lielums = 100;	//border length of the red square
+var xZimet = lielums; 	//horizontal
+var yZimet = lielums; 	//vertical
 
 
-var krustaBiezums = lielums*0.2;
+var krustaBiezums = lielums*0.2; 
 
 
 
@@ -40,19 +40,19 @@ var krustaBiezums = lielums*0.2;
 //50 = lielums/2
 //ctx.fillRect(((lielums/2)-(xZimet/2)),yVert,krustaBiezums,yZimet);
 
-ctx.fillStyle = "#FF0000"; //Figuras krasa
+ctx.fillStyle = "#FF0000"; //color
 //ctx.fillRect(0,0,90,50);
 //ctx.fillRect(xHoriz,yVert,xZimet,yZimet);
 
 ctx.fillRect(xHoriz,yVert,xZimet,yZimet);
 
-//baltakrusta vertikale
-ctx.fillStyle = "#FFF"; //Figuras krasa
+//white rect vertical
+ctx.fillStyle = "#FFF"; //color
 ctx.fillRect(lielums*0.4,lielums*0.1,krustaBiezums,lielums*0.8);
 
 
-//baltakrusta horizontale
-ctx.fillStyle = "#FFF"; //Figuras krasa
+//white rect horizontal
+ctx.fillStyle = "#FFF"; //color
 ctx.fillRect(lielums*0.1,lielums*0.4,lielums*0.8,krustaBiezums);
 
 
